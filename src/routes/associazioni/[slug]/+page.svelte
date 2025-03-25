@@ -137,7 +137,7 @@
 			</Splide>
 		{/if}
 
-		{#if galleryImages.length}
+		{#if attachments.length}
 			<h3>Allegati</h3>
 
 			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
