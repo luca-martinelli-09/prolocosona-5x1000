@@ -20,11 +20,11 @@
 	<title>{title('Dona il tuo 5x1000 a ' + association.Nome)}</title>
 </svelte:head>
 
-<HeroSection class="from-secondary-400 to-secondary rounded-lg bg-gradient-to-bl py-64" withBorder>
+<HeroSection class="from-secondary-400 to-secondary rounded-lg bg-gradient-to-bl py-32 lg:py-64" withBorder>
 	{#snippet children()}
 		<div class="text-primary space-y-10">
 			<H1>
-				<div class="flex flex-col gap-5 lg:flex-row">
+				<div class="flex flex-col gap-5 lg:flex-row items-center md:items-start">
 					<div class="relative">
 						<Tooltip class="size-60" />
 						<img

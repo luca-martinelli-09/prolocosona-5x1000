@@ -24,7 +24,7 @@
 	<title>{title('Home')}</title>
 </svelte:head>
 
-<HeroSection class="to-primary from-primary-300 rounded-lg bg-gradient-to-bl py-72" withBorder>
+<HeroSection class="to-primary from-primary-300 rounded-lg bg-gradient-to-bl py-32 lg:py-72" withBorder>
 	{#snippet children()}
 		<div class="text-primary-foreground max-w-7xl space-y-10">
 			<H1>

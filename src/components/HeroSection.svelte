@@ -11,7 +11,7 @@
 	const { class: className, children, background, withBorder, ...props }: $Props = $props();
 </script>
 
-<section class={twMerge('relative flex min-h-screen overflow-clip py-36', className?.toString())}>
+<section class={twMerge('relative flex min-h-screen overflow-clip py-10 lg:py-36', className?.toString())}>
 	<div class={twMerge('container mx-auto p-3', withBorder && 'p-10')}>
 		{@render children?.()}
 	</div>
