@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { title } from '$lib';
 	import Masonry from 'svelte-bricks';
 	import AssociationCard from '../components/AssociationCard.svelte';
 	import Border from '../components/Border.svelte';
 	import HeroSection from '../components/HeroSection.svelte';
 	import BackgroundSona from '../components/images/BackgroundSona.svelte';
+	import Seo from '../components/Seo.svelte';
 	import Button from '../components/ui/Button.svelte';
 	import Card from '../components/ui/Card.svelte';
 	import Skeleton from '../components/ui/Skeleton.svelte';
@@ -20,11 +20,12 @@
 	const { associations } = $derived(data);
 </script>
 
-<svelte:head>
-	<title>{title('Home')}</title>
-</svelte:head>
+<Seo title="Home" />
 
-<HeroSection class="to-primary from-primary-300 rounded-lg bg-gradient-to-bl py-32 lg:py-72" withBorder>
+<HeroSection
+	class="to-primary from-primary-300 rounded-lg bg-gradient-to-bl py-32 lg:py-72"
+	withBorder
+>
 	{#snippet children()}
 		<div class="text-primary-foreground max-w-7xl space-y-10">
 			<H1>

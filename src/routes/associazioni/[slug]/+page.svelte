@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { title } from '$lib';
 	import { generateSocialArray } from '$lib/utils.js';
 	import Icon from '@iconify/svelte';
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
@@ -10,6 +9,7 @@
 	import HeroSection from '../../../components/HeroSection.svelte';
 	import BackgroundSona from '../../../components/images/BackgroundSona.svelte';
 	import Tooltip from '../../../components/images/Tooltip.svelte';
+	import Seo from '../../../components/Seo.svelte';
 	import Button from '../../../components/ui/Button.svelte';
 	import Card from '../../../components/ui/Card.svelte';
 	import H1 from '../../../components/ui/titles/H1.svelte';
@@ -28,9 +28,10 @@
 	);
 </script>
 
-<svelte:head>
-	<title>{title('Dona il tuo 5x1000 a ' + association.Nome)}</title>
-</svelte:head>
+<Seo
+	title={`Dona il tuo 5x1000 a ${association.Nome}`}
+	description={`Dona il tuo 5x1000 a ${association.Nome}. Contribuisci senza costi aggiuntivi e sostieni i progetti che rendono migliore il tuo territorio.`}
+/>
 
 <HeroSection
 	class="from-secondary-400 to-secondary rounded-lg bg-gradient-to-bl py-32 lg:py-64"
