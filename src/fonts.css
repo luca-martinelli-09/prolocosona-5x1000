@@ -1,0 +1,59 @@
+@font-face {
+	font-family: 'Aujournuit';
+	font-display: swap;
+	src: url('/fonts/aujournuit/Aujournuit-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ronzino';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/ronzino/Ronzino-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ronzino';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('/fonts/ronzino/Ronzino-Medium.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ronzino';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/ronzino/Ronzino-Bold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ronzino';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/ronzino/Ronzino-Oblique.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ronzino';
+	font-style: italic;
+	font-weight: 500;
+	font-display: swap;
+	src: url('/fonts/ronzino/Ronzino-MediumOblique.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Ronzino';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/ronzino/Ronzino-BoldOblique.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Sneaky Times';
+	font-display: swap;
+	src: url('/fonts/sneaky-times/Sneaky-Times.woff2') format('woff2');
+}

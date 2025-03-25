@@ -1,0 +1,184 @@
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
+
+@plugin "tailwindcss-animate";
+
+@theme inline {
+	--font-serif: 'Erode', 'serif';
+	--font-sans: 'Ronzino', 'sans-serif';
+
+	--color-background: #fff7f3;
+	--color-background-foreground: #321100;
+
+	--color-primary: #761d4f;
+	--color-primary-foreground: #f8e2ee;
+	--color-primary-300: #cd3389;
+	--color-primary-400: #932463;
+	--color-primary-500: var(--color-primary);
+	--color-primary-700: #6a1a47;
+
+	--color-secondary: #fbae42;
+	--color-secondary-foreground: var(--color-primary);
+	--color-secondary-400: #fbb655;
+	--color-secondary-500: var(--color-secondary);
+
+	--color-tertiary: #295f98;
+	--color-tertiary-foreground: #e6eff8;
+	--color-tertiary-400: #306fb1;
+	--color-tertiary-500: var(--color-tertiary);
+	--color-tertiary-600: #255589;
+	--color-tertiary-700: #214c7a;
+
+	--color-link: #429dd7;
+
+	--color-card: #ffffff;
+	--color-card-foreground: #333333;
+
+	--text-xs: clamp(0.625rem, 0.5rem + 0.625vw, 0.75rem);
+	--text-sm: clamp(0.75rem, 0.625rem + 0.625vw, 0.875rem);
+	--text-base: clamp(0.875rem, 0.75rem + 0.625vw, 1rem);
+	--text-lg: clamp(1rem, 0.875rem + 0.625vw, 1.125rem);
+	--text-xl: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+	--text-2xl: clamp(1.25rem, 1.125rem + 0.625vw, 1.5rem);
+	--text-3xl: clamp(1.5rem, 1.25rem + 0.625vw, 1.875rem);
+	--text-4xl: clamp(1.875rem, 1.5rem + 0.625vw, 2.25rem);
+	--text-5xl: clamp(2.25rem, 2rem + 1vw, 3rem);
+	--text-6xl: clamp(3rem, 2.5rem + 1.25vw, 3.75rem);
+	--text-7xl: clamp(3.75rem, 3.25rem + 1.25vw, 4.5rem);
+	--text-8xl: clamp(4.5rem, 4rem + 1.5vw, 6rem);
+	--text-9xl: clamp(6rem, 5.25rem + 1.5vw, 8rem);
+
+	--animate-accordion-down: accordion-down 0.2s ease-out;
+	--animate-accordion-up: accordion-up 0.2s ease-out;
+	--animate-caret-blink: caret-blink 1s ease-out infinite;
+	--animate-scale-in: scale-in 0.2s ease;
+	--animate-scale-out: scale-out 0.15s ease;
+	--animate-fade-in: fade-in 0.2s ease;
+	--animate-fade-out: fade-out 0.15s ease;
+	--animate-enter-from-left: enter-from-left 0.2s ease;
+	--animate-enter-from-right: enter-from-right 0.2s ease;
+	--animate-exit-to-left: exit-to-left 0.2s ease;
+	--animate-exit-to-right: exit-to-right 0.2s ease;
+
+	@keyframes accordion-down {
+		from {
+			height: 0;
+		}
+		to {
+			height: var(--bits-accordion-content-height);
+		}
+	}
+
+	@keyframes accordion-up {
+		from {
+			height: var(--bits-accordion-content-height);
+		}
+		to {
+			height: 0;
+		}
+	}
+
+	@keyframes caret-blink {
+		0%,
+		70%,
+		100% {
+			opacity: 1;
+		}
+		20%,
+		50% {
+			opacity: 0;
+		}
+	}
+
+	@keyframes enter-from-right {
+		from {
+			opacity: 0;
+			transform: translateX(200px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes enter-from-left {
+		from {
+			opacity: 0;
+			transform: translateX(-200px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes exit-to-right {
+		from {
+			opacity: 1;
+			transform: translateX(0);
+		}
+		to {
+			opacity: 0;
+			transform: translateX(200px);
+		}
+	}
+
+	@keyframes exit-to-left {
+		from {
+			opacity: 1;
+			transform: translateX(0);
+		}
+		to {
+			opacity: 0;
+			transform: translateX(-200px);
+		}
+	}
+
+	@keyframes scale-in {
+		from {
+			opacity: 0;
+			transform: rotateX(-10deg) scale(0.9);
+		}
+		to {
+			opacity: 1;
+			transform: rotateX(0deg) scale(1);
+		}
+	}
+
+	@keyframes scale-out {
+		from {
+			opacity: 1;
+			transform: rotateX(0deg) scale(1);
+		}
+		to {
+			opacity: 0;
+			transform: rotateX(-10deg) scale(0.95);
+		}
+	}
+
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fade-out {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+}
+
+@layer base {
+	body,
+	html {
+		@apply scroll-smooth;
+	}
+}
