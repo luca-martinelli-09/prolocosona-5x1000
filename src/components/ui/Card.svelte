@@ -30,7 +30,7 @@
 	</header>
 	<p class="font-serif text-2xl">{@render children?.()}</p>
 	{@render background?.()}
-	<span class="pointer-events-none absolute -top-4 -left-4 text-9xl opacity-10 select-none"
+	<span class="pointer-events-none absolute -top-4 -left-4 text-[8rem] opacity-10 select-none"
 		>{icon}</span
 	>
 	<Border size="6px" />

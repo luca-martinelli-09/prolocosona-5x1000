@@ -6,6 +6,6 @@
 	const { class: className, children, ...props }: $Props = $props();
 </script>
 
-<h1 {...props} class={twMerge('text-7xl md:text-9xl font-bold', className?.toString())}>
+<h1 {...props} class={twMerge('text-9xl font-bold', className?.toString())}>
 	{@render children?.()}
 </h1>
