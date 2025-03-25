@@ -15,12 +15,12 @@
 
 <article
 	class={twMerge(
-		'bg-card text-card-foreground relative overflow-clip rounded-lg p-10',
+		'bg-card text-card-foreground relative isolate overflow-clip rounded-lg p-10',
 		className?.toString()
 	)}
 >
-	<header class="mb-5">
-		<h3 class="flex items-center text-3xl font-bold">
+	<header class="relative z-10 mb-5">
+		<h3 class="!my-0 flex items-center text-3xl font-bold">
 			{#if typeof title === 'string'}
 				{icon} {title}
 			{:else}
@@ -28,9 +28,9 @@
 			{/if}
 		</h3>
 	</header>
-	<p class="font-serif text-2xl">{@render children?.()}</p>
+	<p class="relative z-10 !my-0 font-serif text-2xl">{@render children?.()}</p>
 	{@render background?.()}
-	<span class="pointer-events-none absolute -top-4 -left-4 text-[8rem] opacity-10 select-none"
+	<span class="pointer-events-none absolute -top-4 -left-4 z-0 text-[8rem] opacity-10 select-none"
 		>{icon}</span
 	>
 	<Border size="6px" />
