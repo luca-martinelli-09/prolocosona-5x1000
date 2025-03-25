@@ -20,15 +20,18 @@
 	<title>{title('Dona il tuo 5x1000 a ' + association.Nome)}</title>
 </svelte:head>
 
-<HeroSection class="from-secondary-400 to-secondary rounded-lg bg-gradient-to-bl py-32 lg:py-64" withBorder>
+<HeroSection
+	class="from-secondary-400 to-secondary rounded-lg bg-gradient-to-bl py-32 lg:py-64"
+	withBorder
+>
 	{#snippet children()}
 		<div class="text-primary space-y-10">
 			<H1>
-				<div class="flex flex-col gap-5 lg:flex-row items-center md:items-start">
+				<div class="flex flex-col items-center gap-5 md:items-start lg:flex-row">
 					<div class="relative">
-						<Tooltip class="size-60" />
+						<Tooltip class="size-40 lg:size-60" />
 						<img
-							class="absolute top-6 left-12 size-36 object-contain object-center"
+							class="absolute top-4 left-8 size-24 object-contain object-center lg:top-6 lg:left-12 lg:size-36"
 							alt={association.Nome}
 							src={association.Logo?.url}
 						/>

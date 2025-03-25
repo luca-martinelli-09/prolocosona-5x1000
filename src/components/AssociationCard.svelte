@@ -13,11 +13,13 @@
 </script>
 
 <article class="relative mt-10">
-	<div class="bg-card text-card-foreground overflow-clip rounded-lg shadow-xl">
-		<header class="from-secondary to-secondary-400 text-secondary-foreground mb-2 bg-gradient-to-r">
-			<h3 class="ms-36 flex items-center py-5 text-2xl font-bold">{association.Nome}</h3>
+	<div class="bg-card text-card-foreground rounded-lg shadow-xl">
+		<header
+			class="from-secondary to-secondary-400 text-secondary-foreground relative mb-2 rounded-t-lg bg-gradient-to-r"
+		>
+			<h3 class="ms-36 me-10 flex items-center py-5 text-3xl font-bold">{association.Nome}</h3>
 			<span
-				class="bg-tertiary-400 text-tertiary-foreground shadow-tertiary-700 absolute top-0 right-3 px-3 py-1 text-xl font-semibold shadow-[2px_5px_0px_0px]"
+				class="bg-tertiary-400 text-tertiary-foreground shadow-tertiary-700 absolute top-0 right-5 -translate-y-6 px-3 py-1 text-xl font-semibold shadow-[2px_5px_0px_0px]"
 			>
 				{association.Tipologia}
 			</span>

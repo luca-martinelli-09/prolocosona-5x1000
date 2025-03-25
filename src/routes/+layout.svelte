@@ -25,7 +25,7 @@
 
 <span id="faq"></span>
 <HeroSection class="min-h-auto">
-	<H2>Domande frequenti</H2>
+	<H2>Altri dubbi?</H2>
 	{#await faqs}
 		<div class="mt-10">
 			{#each new Array(6).keys() as i (i)}
