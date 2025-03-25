@@ -19,7 +19,7 @@
 		>
 			<h3 class="ms-36 me-10 flex items-center py-5 text-3xl font-bold">{association.Nome}</h3>
 			<span
-				class="bg-tertiary-400 text-tertiary-foreground shadow-tertiary-700 absolute top-0 right-5 -translate-y-6 px-3 py-1 text-xl font-semibold shadow-[2px_5px_0px_0px]"
+				class="bg-tertiary shadow-tertiary-700 text-tertiary-foreground absolute top-0 right-5 -translate-y-6 px-3 py-1 text-xl font-semibold shadow-[2px_5px_0px_0px]"
 			>
 				{association.Tipologia}
 			</span>

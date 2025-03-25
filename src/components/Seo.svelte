@@ -25,4 +25,6 @@
 	<meta name="twitter:description" content={description} />
 	<meta name="twitter:image" content={`${$page.url.origin}/og_image.png`} />
 	<meta name="author" content="Pro Loco Sona" />
+	<meta name="robots" content="index, follow" />
+	<link rel="robots" href="/robots.txt" />
 </svelte:head>
