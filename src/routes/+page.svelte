@@ -106,7 +106,8 @@
 			{items}
 			idKey="Permalink"
 			gap={20}
-			maxColWidth={750}
+			minColWidth={490}
+			maxColWidth={null}
 			class="mt-15 w-full justify-start gap-5"
 		>
 			{#snippet children({ item })}
