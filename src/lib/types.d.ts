@@ -1,15 +1,16 @@
-import type { Attachment } from 'airtable';
-
 export type Contact = {
-	Nome: string;
-	Tipologia: string;
-	Valore?: string;
+	nome: string;
+	tipologia: string;
+};
+
+export type ImageField = {
+	url: string;
 };
 
 export type Association = {
 	Nome: string;
 	Permalink: string;
-	Logo: Attachment;
+	Logo?: ImageField;
 	CodiceFiscale: string;
 	Tipologia: string;
 	Indirizzo: string;
@@ -17,7 +18,7 @@ export type Association = {
 	Finalita: string;
 	CosaAbbiamoFatto?: string;
 	Presentazione?: string;
-	Galleria?: Attachment[];
+	Galleria?: ImageField[];
 	Contatti?: Contact[];
 };
 

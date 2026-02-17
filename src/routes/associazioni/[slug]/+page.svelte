@@ -19,13 +19,7 @@
 	const { data } = $props();
 	const { association } = $derived(data);
 
-	const galleryImages = $derived(
-		(association.Galleria || []).filter((item) => item.type.startsWith('image/'))
-	);
-
-	const attachments = $derived(
-		(association.Galleria || []).filter((item) => !item.type.startsWith('image/'))
-	);
+	const galleryImages = $derived(association.Galleria || []);
 </script>
 
 <Seo
@@ -128,7 +122,7 @@
 									<img
 										class="h-full w-full rounded-xl object-center"
 										src={image.url}
-										alt={image.filename}
+										alt={association.Nome}
 									/>
 								</figure>
 							</div>
@@ -136,24 +130,6 @@
 					{/each}
 				</SplideTrack>
 			</Splide>
-		{/if}
-
-		{#if attachments.length}
-			<h3>Allegati</h3>
-
-			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-				{#each attachments as attachment}
-					<Card title={attachment.filename} icon="📎" class="p-7">
-						<Button
-							variant="primary"
-							class="block w-full py-2 text-base"
-							href={attachment.url}
-							target="_blank"
-							rel="noopener noreferrer">Scarica</Button
-						>
-					</Card>
-				{/each}
-			</div>
 		{/if}
 
 		<h3>Come donare il 5x1000 a {association.Nome}</h3>

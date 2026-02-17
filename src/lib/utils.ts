@@ -65,17 +65,16 @@ export function generateSocialArray(contacts?: Contact[]) {
 	};
 
 	contacts.forEach((c) => {
-		const tipologia = c.Tipologia;
+		const tipologia = c.tipologia;
 
 		if (!(tipologia in socialMap)) return;
 
-		const val = c.Nome;
-		const forcedVal = c.Valore;
+		const val = c.nome;
 
 		social.push({
 			...socialMap[tipologia],
 			label: socialMap[tipologia].label?.(val) || val,
-			href: forcedVal || socialMap[tipologia].href?.(val)
+			href: socialMap[tipologia].href?.(val)
 		});
 	});
 

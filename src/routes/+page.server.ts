@@ -1,4 +1,4 @@
-import { getAllAssociations } from '$lib/server/airtable';
+import { getAllAssociations } from '$lib/server/wordpress';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
