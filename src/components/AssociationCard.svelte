@@ -33,7 +33,7 @@
 					<dd>{association.CodiceFiscale}</dd>
 				</div>
 				<dl class="text-link flex flex-wrap gap-3 pb-5 text-3xl [&>div>dt]:sr-only">
-					{#each generateSocialArray(association.Contatti) as social}
+					{#each generateSocialArray(association.Contatti) as social (social.href)}
 						<div>
 							<dt>{social.title}</dt>
 							<dl>
@@ -50,16 +50,6 @@
 						</div>
 					{/each}
 				</dl>
-				<div class="flex-col">
-					<dt>Finalità</dt>
-					<dd>{association.Finalita}</dd>
-				</div>
-				{#if association.CosaAbbiamoFatto}
-					<div class="flex-col">
-						<dt>Come abbiamo impiegato il 5x1000</dt>
-						<dd>{association.CosaAbbiamoFatto}</dd>
-					</div>
-				{/if}
 			</dl>
 			<a class="mt-5 flex w-full flex-col" href={`/associazioni/${association.Permalink}`}>
 				<Button>Scopri di più</Button>

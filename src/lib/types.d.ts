@@ -1,6 +1,7 @@
 export type Contact = {
-	nome: string;
-	tipologia: string;
+	name: string;
+	type: string;
+	value: string;
 };
 
 export type ImageField = {
@@ -12,11 +13,10 @@ export type Association = {
 	Permalink: string;
 	Logo?: ImageField;
 	CodiceFiscale: string;
+	PartitaIVA?: string;
 	Tipologia: string;
-	Indirizzo: string;
-	Frazione: string;
-	Finalita: string;
-	CosaAbbiamoFatto?: string;
+	Indirizzo?: string;
+	Frazione?: string;
 	Presentazione?: string;
 	Galleria?: ImageField[];
 	Contatti?: Contact[];

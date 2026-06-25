@@ -4,7 +4,6 @@
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import '@splidejs/svelte-splide/css/core';
 	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
-	import { marked } from 'marked';
 	import Border from '../../../components/Border.svelte';
 	import HeroSection from '../../../components/HeroSection.svelte';
 	import BackgroundSona from '../../../components/images/BackgroundSona.svelte';
@@ -74,7 +73,7 @@
 	<H2>Chi siamo</H2>
 	<article class="prose prose-2xl prose-a:text-link mt-10 max-w-none font-serif">
 		{#if association.Presentazione}
-			{@html marked(association.Presentazione)}
+			{@html association.Presentazione}
 		{/if}
 
 		{#if galleryImages.length}

@@ -18,63 +18,68 @@ export function generateSocialArray(contacts?: Contact[]) {
 			label?: (v: string) => string;
 		};
 	} = {
-		SitoWeb: {
+		website: {
 			title: 'Sito web',
 			icon: 'hugeicons:globe-02',
-			href: (v) => `https://${v}`
+			href: (v) => `https://${v.replace(/^https?:\/\//, '')}`
 		},
-		Email: {
+		email: {
 			title: 'Email',
 			icon: 'hugeicons:mail-01',
 			href: (v) => `mailto:${v}`
 		},
-		Telefono: {
+		pec: {
+			title: 'PEC',
+			icon: 'hugeicons:mail-01',
+			href: (v) => `mailto:${v}`
+		},
+		phone: {
 			title: 'Telefono',
 			icon: 'hugeicons:telephone',
 			href: (v) => `tel:${v}`
 		},
-		Facebook: {
+		facebook: {
 			title: 'Facebook',
 			icon: 'hugeicons:facebook-02',
 			href: (v) => `https://facebook.com/${v}`
 		},
-		Instagram: {
+		instagram: {
 			title: 'Instagram',
 			icon: 'hugeicons:instagram',
-			href: (v) => `https://instagram.com/@${v}`,
-			label: (v) => `@${v}`
+			href: (v) => `https://instagram.com/${v.replace(/^@/, '')}`,
+			label: (v) => `@${v.replace(/^@/, '')}`
 		},
-		YouTube: {
+		youtube: {
 			title: 'YouTube',
 			icon: 'hugeicons:youtube',
 			href: (v) => `https://youtube.com/${v}`,
 			label: () => 'Canale YouTube'
 		},
-		CanaleWhatsapp: {
+		whatsapp_channel: {
 			title: 'Canale WhatsApp',
 			icon: 'hugeicons:whatsapp',
 			href: (v) => `https://whatsapp.com/channel/${v}`,
 			label: () => 'Canale WhatsApp'
 		},
-		CanaleTelegram: {
+		telegram_channel: {
 			title: 'Canale Telegram',
 			icon: 'hugeicons:telegram',
-			href: (v) => `https://t.me/${v}`,
-			label: (v) => `@${v}`
+			href: (v) => `https://t.me/${v.replace(/^@/, '')}`,
+			label: (v) => `@${v.replace(/^@/, '')}`
 		}
 	};
 
 	contacts.forEach((c) => {
-		const tipologia = c.tipologia;
+		const type = c.type;
 
-		if (!(tipologia in socialMap)) return;
+		if (!(type in socialMap)) return;
 
-		const val = c.nome;
+		const val = c.value;
 
 		social.push({
-			...socialMap[tipologia],
-			label: socialMap[tipologia].label?.(val) || val,
-			href: socialMap[tipologia].href?.(val)
+			...socialMap[type],
+			label: socialMap[type].label?.(val) || val,
+			href: socialMap[type].href?.(val)
 		});
 	});
 

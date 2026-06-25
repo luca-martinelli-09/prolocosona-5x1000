@@ -26,21 +26,19 @@
 	class="to-primary from-primary-300 rounded-lg bg-gradient-to-bl py-32 lg:py-72"
 	withBorder
 >
-	{#snippet children()}
-		<div class="text-primary-foreground max-w-7xl space-y-10">
-			<H1>
-				Dona il tuo <span class="font-serif italic">5x1000</span> alle associazioni del
-				<span class="font-serif italic">Comune di Sona</span>
-			</H1>
-			<Subtitle>
-				Contribuisci <strong>senza costi aggiuntivi</strong> e sostieni i progetti che rendono
-				<strong>migliore il tuo territorio</strong>.
-			</Subtitle>
-			<a href="/#come-funziona">
-				<Button>Scopri come funziona</Button>
-			</a>
-		</div>
-	{/snippet}
+	<div class="text-primary-foreground max-w-7xl space-y-10">
+		<H1>
+			Dona il tuo <span class="font-serif italic">5x1000</span> alle associazioni del
+			<span class="font-serif italic">Comune di Sona</span>
+		</H1>
+		<Subtitle>
+			Contribuisci <strong>senza costi aggiuntivi</strong> e sostieni i progetti che rendono
+			<strong>migliore il tuo territorio</strong>.
+		</Subtitle>
+		<a href="/#come-funziona">
+			<Button>Scopri come funziona</Button>
+		</a>
+	</div>
 
 	{#snippet background()}
 		<div
